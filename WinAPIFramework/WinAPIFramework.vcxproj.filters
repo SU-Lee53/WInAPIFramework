@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Entry">
+      <UniqueIdentifier>{941a4cf4-8cc6-4fab-9533-b90b8fde10f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application">
+      <UniqueIdentifier>{fdd083c9-6850-40b2-8869-32497e16d269}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers">
+      <UniqueIdentifier>{a1218f65-cd01-464b-be65-8a64ddcca440}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\pch">
+      <UniqueIdentifier>{c04c6536-9c5f-4e23-ad82-b472292419b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Base">
+      <UniqueIdentifier>{9dd9d44e-530d-4fbd-875f-5ce5a3bc181f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Demos">
+      <UniqueIdentifier>{811a121a-82a0-4718-9744-039002b23031}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Core.cpp">
+      <Filter>Entry</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>Headers\pch</Filter>
+    </ClCompile>
+    <ClCompile Include="Application.cpp">
+      <Filter>Application\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo0.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo2023\Demo1_1.cpp">
+      <Filter>Application\Demos</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo2023\Demo1_2.cpp">
+      <Filter>Application\Demos</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Core.h">
+      <Filter>Entry</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>Headers\pch</Filter>
+    </ClInclude>
+    <ClInclude Include="Application.h">
+      <Filter>Application\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Define.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo0.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo2023\Demo1_1.h">
+      <Filter>Application\Demos</Filter>
+    </ClInclude>
+    <ClInclude Include="WinObjWrapper.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Types.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo2023\Demo1_2.h">
+      <Filter>Application\Demos</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.h" />
+  </ItemGroup>
+</Project>
