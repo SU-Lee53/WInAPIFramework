@@ -1,4 +1,5 @@
 #pragma once
+
 class Utils
 {
 public:
@@ -9,6 +10,36 @@ public:
 		sprintf_s(buffer, 256, "Error occured : code %lu\n", error);
 		OutputDebugStringA(buffer);
 		__debugbreak();
+	}
+
+	static std::wstring GenerateFormattedWString(LPCTSTR fmt, ...)
+	{
+		WCHAR lpOut[100];
+
+		va_list fmtArgs;
+		va_start(fmtArgs, fmt);
+
+		::_vsnwprintf_s(lpOut, _countof(lpOut), _TRUNCATE, fmt, fmtArgs);
+
+		va_end(fmtArgs);
+
+		std::wstring res(lpOut, _countof(lpOut));
+		return res;
+	}
+	static std::string GenerateFormattedString(LPCSTR fmt, ...)
+	{
+		CHAR lpOut[100];
+
+		va_list fmtArgs;
+		va_start(fmtArgs, fmt);
+
+		::_vsnprintf_s(lpOut, _countof(lpOut), fmt, fmtArgs);
+
+
+		va_end(fmtArgs);
+
+		std::string res(lpOut, _countof(lpOut));
+		return res;
 	}
 };
 

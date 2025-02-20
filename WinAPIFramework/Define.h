@@ -14,7 +14,11 @@ public:										\
 #define GET_SINGLE(classname)	classname::GetInstance()
 
 #define CORE						GET_SINGLE(Core)
+#define RANDOM						GET_SINGLE(RandomGenerator)
+
+
 #define CORE_DESC					CORE.GetDesc()
+#define CUR_HWND					CORE.GetDesc().hWnd
 
 #define CUR_DEMO(demoName)		static_pointer_cast<demoName>(CORE_DESC.app)
 

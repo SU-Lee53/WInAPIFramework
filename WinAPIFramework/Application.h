@@ -36,6 +36,10 @@ protected:
 	AppDesc m_AppDesc = {};
 
 protected:
+	BOOL BeginAppPaint();
+	BOOL EndAppPaint();
+
+protected:
 	// Win object resources
 	PaintResource m_PaintResource = {};
 };

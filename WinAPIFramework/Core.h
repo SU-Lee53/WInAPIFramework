@@ -12,7 +12,7 @@ class Core
 	DECLARE_SINGLE(Core);
 
 public:
-	WPARAM BeginWndProgram(const CoreDesc& appDesc);
+	WPARAM RunWndProgram(const CoreDesc& appDesc);
 	ATOM MyRegisterClass();
 	BOOL InitInstance(int cmdShow);
 

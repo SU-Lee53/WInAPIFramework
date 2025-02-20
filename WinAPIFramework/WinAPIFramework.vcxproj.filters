@@ -19,6 +19,18 @@
     <Filter Include="Application\Demos">
       <UniqueIdentifier>{811a121a-82a0-4718-9744-039002b23031}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Application\Demos\Chapter1">
+      <UniqueIdentifier>{b1487e2a-b6d4-4927-84a8-02b023285cb9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Demos\Chapter2">
+      <UniqueIdentifier>{63444a00-7757-408a-86de-9b9e4ecfd8eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WinObjects">
+      <UniqueIdentifier>{5496685f-d06a-4f67-81dc-8e95fe46cd2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{36572535-a0c2-4abe-8539-16e6b79c1623}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -35,12 +47,27 @@
       <Filter>Application</Filter>
     </ClCompile>
     <ClCompile Include="Demo2023\Demo1_1.cpp">
-      <Filter>Application\Demos</Filter>
+      <Filter>Application\Demos\Chapter1</Filter>
     </ClCompile>
     <ClCompile Include="Demo2023\Demo1_2.cpp">
-      <Filter>Application\Demos</Filter>
+      <Filter>Application\Demos\Chapter1</Filter>
     </ClCompile>
-    <ClCompile Include="Utils.cpp" />
+    <ClCompile Include="Demo2023\Demo2_1.cpp">
+      <Filter>Application\Demos\Chapter2</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="TextBox.cpp">
+      <Filter>WinObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="RandomGenerator.cpp" />
+    <ClCompile Include="Demo2023\Demo2_2.cpp">
+      <Filter>Application\Demos\Chapter2</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo2023\Demo2_3.cpp">
+      <Filter>Application\Demos\Chapter2</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core.h">
@@ -58,18 +85,33 @@
     <ClInclude Include="Demo0.h">
       <Filter>Application</Filter>
     </ClInclude>
-    <ClInclude Include="Demo2023\Demo1_1.h">
-      <Filter>Application\Demos</Filter>
-    </ClInclude>
     <ClInclude Include="WinObjWrapper.h">
       <Filter>Headers</Filter>
     </ClInclude>
     <ClInclude Include="Types.h">
       <Filter>Headers</Filter>
     </ClInclude>
-    <ClInclude Include="Demo2023\Demo1_2.h">
-      <Filter>Application\Demos</Filter>
+    <ClInclude Include="Demo2023\Demo1_1.h">
+      <Filter>Application\Demos\Chapter1</Filter>
     </ClInclude>
-    <ClInclude Include="Utils.h" />
+    <ClInclude Include="Demo2023\Demo1_2.h">
+      <Filter>Application\Demos\Chapter1</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo2023\Demo2_1.h">
+      <Filter>Application\Demos\Chapter2</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="TextBox.h">
+      <Filter>WinObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="RandomGenerator.h" />
+    <ClInclude Include="Demo2023\Demo2_2.h">
+      <Filter>Application\Demos\Chapter2</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo2023\Demo2_3.h">
+      <Filter>Application\Demos\Chapter2</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

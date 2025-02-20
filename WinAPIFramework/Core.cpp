@@ -3,10 +3,11 @@
 #include "Application.h"
 #include "Utils.h"
 
-WPARAM Core::BeginWndProgram(const CoreDesc& appDesc)
+WPARAM Core::RunWndProgram(const CoreDesc& appDesc)
 {
 	m_Desc = appDesc;
 	m_Desc.app->Initialize();
+	RANDOM.Initialize();
 
 	MyRegisterClass();
 
