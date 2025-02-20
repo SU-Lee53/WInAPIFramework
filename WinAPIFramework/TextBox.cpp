@@ -12,7 +12,7 @@ TextBox::~TextBox()
 	//__debugbreak();
 }
 
-BOOL TextBox::Create(RECT rect, UINT flags, COLORREF textColor, COLORREF bkColor)
+BOOL TextBox::Initialize(RECT rect, UINT flags, COLORREF textColor, COLORREF bkColor)
 {
 	m_Rect = rect;
 	m_uiFlags = flags;

@@ -15,7 +15,7 @@ public:
 	~TextBox();
 
 public:
-	BOOL Create(RECT rect, UINT flags, COLORREF textColor = 0x000000, COLORREF bkColor = 0xffffff);
+	BOOL Initialize(RECT rect, UINT flags, COLORREF textColor = 0x000000, COLORREF bkColor = 0xffffff);
 	void Draw(HDC hDC, const std::wstring& wstrText, TEXTBOX_DRAW_TYPE drawType = TEXTBOX_DRAW_TYPE_NONE);
 
 public:

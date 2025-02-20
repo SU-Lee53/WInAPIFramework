@@ -12,7 +12,7 @@ class RandomGenerator
 	DECLARE_SINGLE(RandomGenerator)
 
 public:
-	BOOL Create()
+	BOOL Initialize()
 	{
 		return TRUE;
 	}

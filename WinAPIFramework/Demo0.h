@@ -8,7 +8,7 @@ public:
 	virtual ~Demo0() {}
 
 public:
-	virtual BOOL Create() override;
+	virtual BOOL Initialize() override;
 
 	static LRESULT CALLBACK WndProc(HWND handle, UINT message, WPARAM wParam, LPARAM lParam);
 

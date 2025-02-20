@@ -15,15 +15,15 @@ struct C_RECT : public RECT
 
 	C_RECT(LONG left, LONG top, LONG right, LONG bottom)
 	{
-		Create(left, top, right, bottom);
+		Initialize(left, top, right, bottom);
 	}
 
-	inline void Create(LONG left, LONG top, LONG right, LONG bottom)
+	inline void Initialize(LONG left, LONG top, LONG right, LONG bottom)
 	{
-		Create(*this, left, top, right, bottom);
+		Initialize(*this, left, top, right, bottom);
 	}
 
-	static inline void Create(RECT& rect, LONG left, LONG top, LONG right, LONG bottom)
+	static inline void Initialize(RECT& rect, LONG left, LONG top, LONG right, LONG bottom)
 	{
 		rect.left = left;
 		rect.top = top;
@@ -42,15 +42,15 @@ struct C_SOLID_HBRUSH
 
 	C_SOLID_HBRUSH(COLORREF rgb)
 	{
-		Create(rgb);
+		Initialize(rgb);
 	}
 
-	inline void Create(COLORREF rgb)
+	inline void Initialize(COLORREF rgb)
 	{
-		Create(*this, rgb);
+		Initialize(*this, rgb);
 	}
 
-	static inline void Create(C_SOLID_HBRUSH& brush, COLORREF rgb)
+	static inline void Initialize(C_SOLID_HBRUSH& brush, COLORREF rgb)
 	{
 		brush.hBrush = CreateSolidBrush(rgb);
 	}

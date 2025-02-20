@@ -25,7 +25,7 @@ public:
 	virtual ~Application() {}
 
 public:
-	virtual BOOL Create() = 0;
+	virtual BOOL Initialize() = 0;
 	
 public:
 	WNDPROC GetWndProc() { return m_pProcFunction; }
