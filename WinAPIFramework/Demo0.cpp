@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "Demo0.h"
 
-BOOL Demo0::Initialize()
+BOOL Demo0::Create()
 {
     m_pProcFunction = WndProc;
 

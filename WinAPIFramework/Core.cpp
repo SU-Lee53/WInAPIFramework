@@ -6,8 +6,8 @@
 WPARAM Core::RunWndProgram(const CoreDesc& appDesc)
 {
 	m_Desc = appDesc;
-	m_Desc.app->Initialize();
-	RANDOM.Initialize();
+	m_Desc.app->Create();
+	RANDOM.Create();
 
 	MyRegisterClass();
 

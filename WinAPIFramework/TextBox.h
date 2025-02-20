@@ -15,8 +15,8 @@ public:
 	~TextBox();
 
 public:
-	BOOL Initialize(RECT rect, UINT flags, COLORREF textColor = 0x000000, COLORREF bkColor = 0xffffff);
-	void Draw(HDC hDC, const std::wstring& strText, TEXTBOX_DRAW_TYPE drawType = TEXTBOX_DRAW_TYPE_NONE);
+	BOOL Create(RECT rect, UINT flags, COLORREF textColor = 0x000000, COLORREF bkColor = 0xffffff);
+	void Draw(HDC hDC, const std::wstring& wstrText, TEXTBOX_DRAW_TYPE drawType = TEXTBOX_DRAW_TYPE_NONE);
 
 public:
 	void SetFlag(UINT flag) { m_uiFlags |= flag; }
@@ -36,6 +36,7 @@ private:
 public:
 	// Static Text Functions
 	static void DrawFormattedString(HDC hDC, WndPosition pos, LPCTSTR fmt, ...);
+	static SIZE GetTextExtent(HDC hDC, const std::wstring& wstrText);
 
 private:
 	RECT m_Rect		= {};

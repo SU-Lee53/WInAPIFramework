@@ -15,6 +15,7 @@ public:										\
 
 #define CORE						GET_SINGLE(Core)
 #define RANDOM						GET_SINGLE(RandomGenerator)
+#define CARET						GET_SINGLE(Caret)
 
 
 #define CORE_DESC					CORE.GetDesc()

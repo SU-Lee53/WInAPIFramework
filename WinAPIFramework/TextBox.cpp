@@ -12,7 +12,7 @@ TextBox::~TextBox()
 	//__debugbreak();
 }
 
-BOOL TextBox::Initialize(RECT rect, UINT flags, COLORREF textColor, COLORREF bkColor)
+BOOL TextBox::Create(RECT rect, UINT flags, COLORREF textColor, COLORREF bkColor)
 {
 	m_Rect = rect;
 	m_uiFlags = flags;
@@ -22,7 +22,7 @@ BOOL TextBox::Initialize(RECT rect, UINT flags, COLORREF textColor, COLORREF bkC
 	return TRUE;
 }
 
-void TextBox::Draw(HDC hDC, const std::wstring& strText, TEXTBOX_DRAW_TYPE drawType)
+void TextBox::Draw(HDC hDC, const std::wstring& wstrText, TEXTBOX_DRAW_TYPE drawType)
 {
 	if (!(drawType & TEXTBOX_DRAW_TYPE_NONE))
 	{
@@ -31,7 +31,7 @@ void TextBox::Draw(HDC hDC, const std::wstring& strText, TEXTBOX_DRAW_TYPE drawT
 
 	::SetTextColor(hDC, m_TextColor);
 	::SetBkColor(hDC, m_BkColor);
-	::DrawText(hDC, strText.c_str(), strText.size(), &m_Rect, m_uiFlags);
+	::DrawText(hDC, wstrText.c_str(), wstrText.size(), &m_Rect, m_uiFlags);
 }
 
 void TextBox::FillRectByFlags(HDC hDC, TEXTBOX_DRAW_TYPE drawType)
@@ -62,4 +62,12 @@ void TextBox::DrawFormattedString(HDC hDC, WndPosition pos, LPCTSTR fmt, ...)
 	::TextOut(hDC, pos.x, pos.y, lpOut, lstrlen(lpOut));
 
 	va_end(fmtArgs);
+}
+
+SIZE TextBox::GetTextExtent(HDC hDC, const std::wstring& wstrText)
+{
+	SIZE outSize;
+	GetTextExtentPoint32(hDC, wstrText.data(), wstrText.size(), &outSize);
+	
+	return outSize;
 }

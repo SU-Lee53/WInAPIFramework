@@ -61,12 +61,20 @@
     <ClCompile Include="TextBox.cpp">
       <Filter>WinObjects</Filter>
     </ClCompile>
-    <ClCompile Include="RandomGenerator.cpp" />
     <ClCompile Include="Demo2023\Demo2_2.cpp">
       <Filter>Application\Demos\Chapter2</Filter>
     </ClCompile>
     <ClCompile Include="Demo2023\Demo2_3.cpp">
       <Filter>Application\Demos\Chapter2</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo2023\Demo2_4.cpp">
+      <Filter>Application\Demos\Chapter2</Filter>
+    </ClCompile>
+    <ClCompile Include="RandomGenerator.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Caret.cpp">
+      <Filter>WinObjects</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -106,12 +114,20 @@
     <ClInclude Include="TextBox.h">
       <Filter>WinObjects</Filter>
     </ClInclude>
-    <ClInclude Include="RandomGenerator.h" />
     <ClInclude Include="Demo2023\Demo2_2.h">
       <Filter>Application\Demos\Chapter2</Filter>
     </ClInclude>
     <ClInclude Include="Demo2023\Demo2_3.h">
       <Filter>Application\Demos\Chapter2</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo2023\Demo2_4.h">
+      <Filter>Application\Demos\Chapter2</Filter>
+    </ClInclude>
+    <ClInclude Include="RandomGenerator.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Caret.h">
+      <Filter>WinObjects</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

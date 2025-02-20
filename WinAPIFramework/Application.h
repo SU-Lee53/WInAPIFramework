@@ -25,7 +25,7 @@ public:
 	virtual ~Application() {}
 
 public:
-	virtual BOOL Initialize() = 0;
+	virtual BOOL Create() = 0;
 	
 public:
 	WNDPROC GetWndProc() { return m_pProcFunction; }
@@ -36,8 +36,11 @@ protected:
 	AppDesc m_AppDesc = {};
 
 protected:
-	BOOL BeginAppPaint();
-	BOOL EndAppPaint();
+	HDC BeginAppPaint(HWND hWnd = CUR_HWND);
+	BOOL EndAppPaint(HWND hWnd = CUR_HWND);
+
+	HDC BeginDC(HWND hWnd);
+	BOOL EndDC(HWND hWnd, HDC hDC);
 
 protected:
 	// Win object resources

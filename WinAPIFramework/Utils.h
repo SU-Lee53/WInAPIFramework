@@ -23,7 +23,7 @@ public:
 
 		va_end(fmtArgs);
 
-		std::wstring res(lpOut, _countof(lpOut));
+		std::wstring res(lpOut);
 		return res;
 	}
 	static std::string GenerateFormattedString(LPCSTR fmt, ...)
