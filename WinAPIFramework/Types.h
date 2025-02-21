@@ -8,6 +8,22 @@ struct WndSize
 
 struct WndPosition
 {
-	DWORD x = 0;
-	DWORD y = 0;
+	union
+	{
+		DWORD x;
+		DWORD row;
+	};
+
+	union
+	{
+		DWORD y;
+		DWORD col;
+	};
+};
+
+struct PenInfo
+{
+	int style = PS_SOLID;
+	int width = 1;
+	COLORREF color = RGB(0,0,0);
 };

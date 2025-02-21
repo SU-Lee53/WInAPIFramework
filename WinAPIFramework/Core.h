@@ -19,9 +19,13 @@ public:
 	// WndProc will be in each application
 
 	CoreDesc& GetDesc() { return m_Desc; }
+	WndSize& GetWindowSize() { return m_WindowSize; }
 
 private:
 	CoreDesc m_Desc;
+
+	// Cache window size
+	WndSize m_WindowSize = {};
 
 };
 

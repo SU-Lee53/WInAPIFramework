@@ -18,7 +18,7 @@ struct AppDesc
 	int backgroundColor = WHITE_BRUSH;
 };
 
-class Application
+class Application : public std::enable_shared_from_this<Application>
 {
 public:
 	Application() {}

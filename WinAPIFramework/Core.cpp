@@ -9,6 +9,8 @@ WPARAM Core::RunWndProgram(const CoreDesc& appDesc)
 	m_Desc.app->Initialize();
 	RANDOM.Initialize();
 
+	m_WindowSize = WndSize{ m_Desc.app->GetAppDesc().wndSize.width, m_Desc.app->GetAppDesc().wndSize.height };
+
 	MyRegisterClass();
 
 	if (!InitInstance(SW_SHOW))

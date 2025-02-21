@@ -22,5 +22,13 @@ public:										\
 #define CUR_HWND					CORE.GetDesc().hWnd
 
 #define CUR_DEMO(demoName)		static_pointer_cast<demoName>(CORE_DESC.app)
+#define CUR_DEMO_DESC(demoName) static_pointer_cast<demoName>(CORE_DESC.app)>GetAppDesc()
 
 // Utils
+
+#define _SHAPES_BEGIN         \
+    namespace shapes {		 
+
+
+#define _SHAPES_END \
+    }			  

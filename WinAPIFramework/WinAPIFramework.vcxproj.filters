@@ -31,6 +31,9 @@
     <Filter Include="Utils">
       <UniqueIdentifier>{36572535-a0c2-4abe-8539-16e6b79c1623}</UniqueIdentifier>
     </Filter>
+    <Filter Include="WinObjects\Shapes">
+      <UniqueIdentifier>{20ed447f-12d9-4a32-9dc8-dd4ba575df55}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -75,6 +78,35 @@
     </ClCompile>
     <ClCompile Include="Caret.cpp">
       <Filter>WinObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo2023\Demo2_5.cpp">
+      <Filter>Application\Demos\Chapter2</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo2023\Demo2_7.cpp">
+      <Filter>Application\Demos\Chapter2</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo2023\Demo2_8.cpp">
+      <Filter>Application\Demos\Chapter2</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo2023\Demo2_9.cpp">
+      <Filter>Application\Demos\Chapter2</Filter>
+    </ClCompile>
+    <ClCompile Include="Pixel.cpp">
+      <Filter>WinObjects\Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="Line.cpp">
+      <Filter>WinObjects\Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="Ellipse.cpp">
+      <Filter>WinObjects\Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="Rectangle.cpp" />
+    <ClCompile Include="Polygon.cpp" />
+    <ClCompile Include="Demo2023\Demo2_10.cpp">
+      <Filter>Application\Demos\Chapter2</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo2023\Demo2_11.cpp">
+      <Filter>Application\Demos\Chapter2</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -128,6 +160,35 @@
     </ClInclude>
     <ClInclude Include="Caret.h">
       <Filter>WinObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo2023\Demo2_5.h">
+      <Filter>Application\Demos\Chapter2</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo2023\Demo2_7.h">
+      <Filter>Application\Demos\Chapter2</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo2023\Demo2_8.h">
+      <Filter>Application\Demos\Chapter2</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo2023\Demo2_9.h">
+      <Filter>Application\Demos\Chapter2</Filter>
+    </ClInclude>
+    <ClInclude Include="Pixel.h">
+      <Filter>WinObjects\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="Line.h">
+      <Filter>WinObjects\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="Ellipse.h">
+      <Filter>WinObjects\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="Rectangle.h" />
+    <ClInclude Include="Polygon.h" />
+    <ClInclude Include="Demo2023\Demo2_10.h">
+      <Filter>Application\Demos\Chapter2</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo2023\Demo2_11.h">
+      <Filter>Application\Demos\Chapter2</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -57,6 +57,20 @@ public:
 		return RGB(rgb[0], rgb[1], rgb[2]);
 	}
 
+	POINT GenerateRandomPoint(int min = 0, int max = 100)
+	{
+		std::random_device rd;
+		std::mt19937 gen(rd());
+
+		std::uniform_int_distribution<int> dis(min, max);
+
+		POINT p;
+		p.x = static_cast<LONG>(dis(gen));
+		p.y = static_cast<LONG>(dis(gen));
+
+		return p;
+	}
+
 };
 
 

@@ -68,3 +68,76 @@ struct C_SOLID_HBRUSH
 
 	HBRUSH hBrush;
 };
+
+struct C_HATCH_HBRUSH
+{
+	C_HATCH_HBRUSH() = default;
+	explicit C_HATCH_HBRUSH(const HBRUSH& brush) noexcept
+		: hBrush(brush)
+	{}
+
+	C_HATCH_HBRUSH(int iHatch, COLORREF rgb)
+	{
+		Initialize(iHatch, rgb);
+	}
+
+	inline void Initialize(int iHatch, COLORREF rgb)
+	{
+		Initialize(*this, iHatch, rgb);
+	}
+
+	static inline void Initialize(C_HATCH_HBRUSH& brush, int iHatch, COLORREF rgb)
+	{
+		brush.hBrush = CreateHatchBrush(iHatch, rgb);
+	}
+
+	~C_HATCH_HBRUSH()
+	{
+	}
+
+	inline void Destroy()
+	{
+		DeleteObject(hBrush);
+	}
+
+	operator HBRUSH() const { return hBrush; }
+
+	HBRUSH hBrush;
+};
+
+struct C_HPEN
+{
+	C_HPEN() = default;
+	explicit C_HPEN(const HPEN& pen) noexcept
+		:hPen(pen)
+	{}
+
+	C_HPEN(int penStyle = PS_SOLID, int width = 1, COLORREF color = RGB(0,0,0))
+	{
+		Initialize(penStyle, width, color);
+	}
+
+	inline void Initialize(int penStyle, int width, COLORREF color)
+	{
+		Initialize(*this, penStyle, width, color);
+	}
+
+	static inline void Initialize(C_HPEN& pen, int penStyle, int width, COLORREF color)
+	{
+		pen.hPen = CreatePen(penStyle, width, color);
+	}
+
+	~C_HPEN()
+	{
+	}
+
+	inline void Destroy()
+	{
+		DeleteObject(hPen);
+	}
+
+	operator HPEN() const { return hPen; }
+
+
+	HPEN hPen;
+};
