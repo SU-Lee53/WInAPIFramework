@@ -139,7 +139,10 @@
     <ClCompile Include="TimerManager.cpp">
       <Filter>Managers</Filter>
     </ClCompile>
-    <ClCompile Include="InputManager.cpp" />
+    <ClCompile Include="InputManager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core.h">
@@ -244,6 +247,9 @@
     <ClInclude Include="TimerManager.h">
       <Filter>Managers</Filter>
     </ClInclude>
-    <ClInclude Include="InputManager.h" />
+    <ClInclude Include="InputManager.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeManager.h" />
   </ItemGroup>
 </Project>

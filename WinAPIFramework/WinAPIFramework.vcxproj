@@ -81,6 +81,7 @@
     <ClCompile Include="Rectangle.cpp" />
     <ClCompile Include="Shapes.cpp" />
     <ClCompile Include="TextBox.cpp" />
+    <ClCompile Include="TimeManager.cpp" />
     <ClCompile Include="Timer.cpp" />
     <ClCompile Include="TimerManager.cpp" />
     <ClCompile Include="Utils.cpp" />
@@ -116,6 +117,7 @@
     <ClInclude Include="Rectangle.h" />
     <ClInclude Include="Shapes.h" />
     <ClInclude Include="TextBox.h" />
+    <ClInclude Include="TimeManager.h" />
     <ClInclude Include="Timer.h" />
     <ClInclude Include="TimerManager.h" />
     <ClInclude Include="Types.h" />

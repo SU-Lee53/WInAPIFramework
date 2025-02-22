@@ -16,6 +16,9 @@ public:
 	ATOM MyRegisterClass();
 	BOOL InitInstance(int cmdShow);
 
+	void Update();
+	void Draw();
+
 	// WndProc will be in each application
 
 	CoreDesc& GetDesc() { return m_Desc; }

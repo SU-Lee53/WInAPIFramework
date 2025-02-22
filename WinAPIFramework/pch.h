@@ -24,6 +24,7 @@
 // Manager
 #include "TimerManager.h"
 #include "InputManager.h"
+#include "TimeManager.h"
 
 // Cores
 #include "Core.h"

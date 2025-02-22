@@ -22,18 +22,43 @@ WPARAM Core::RunWndProgram(const CoreDesc& appDesc)
 		return FALSE;
 	}
 
-	MSG msg;
+	MSG msg = {};
 	
 	// Init Zone 2
 	{
-		TIMER.Initialize(m_Desc.hWnd);
+		INPUT.Initialize();
+		TIME.Initialize();
 	}
 
-	while (GetMessage(&msg, 0, 0, 0))
+	if (m_Desc.app->GetAppDesc().appRunMode == APP_RUN_MODE_WNDPROC)
 	{
-		TranslateMessage(&msg);
-		DispatchMessage(&msg);
+		while (GetMessage(&msg, 0, 0, 0))
+		{
+			TranslateMessage(&msg);
+			DispatchMessage(&msg);
+		}
 	}
+	else if (m_Desc.app->GetAppDesc().appRunMode == APP_RUN_MODE_GAME_LOOP)
+	{
+		while (msg.message != WM_QUIT)
+		{
+			if (PeekMessage(&msg, 0, 0, 0, PM_REMOVE))
+			{
+				TranslateMessage(&msg);
+				DispatchMessage(&msg);
+			}
+			else
+			{
+				// Game Loop
+				{
+					Update();
+					Draw();
+				}
+			}
+		}
+	}
+
+	m_Desc.app->Destroy();
 
 
 	return msg.wParam;
@@ -83,4 +108,17 @@ BOOL Core::InitInstance(int cmdShow)
 	bResult = ::UpdateWindow(m_Desc.hWnd);
 
 	return bResult;
+}
+
+void Core::Update()
+{
+	m_Desc.app->Update();
+}
+
+void Core::Draw()
+{
+	m_Desc.app->BeginDoubleBuffering(m_Desc.hWnd);
+	m_Desc.app->Draw(m_Desc.app->GetBackBuffer());
+	m_Desc.app->EndDoubleBuffering(m_Desc.hWnd);
+
 }

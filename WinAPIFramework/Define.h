@@ -18,6 +18,7 @@ public:										\
 #define CARET						GET_SINGLE(Caret)
 #define TIMER						GET_SINGLE(TimerManager)
 #define INPUT						GET_SINGLE(InputManager)
+#define TIME						GET_SINGLE(TimeManager)
 
 #define CORE_DESC					CORE.GetDesc()
 #define CUR_HWND					CORE.GetDesc().hWnd
