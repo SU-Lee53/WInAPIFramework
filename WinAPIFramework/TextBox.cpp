@@ -12,21 +12,22 @@ TextBox::~TextBox()
 	//__debugbreak();
 }
 
-BOOL TextBox::Initialize(RECT rect, UINT flags, COLORREF textColor, COLORREF bkColor)
+BOOL TextBox::Initialize(RECT rect, UINT flags, COLORREF textColor, COLORREF bkColor, COLORREF frameColor)
 {
 	m_Rect = rect;
 	m_uiFlags = flags;
 	m_TextColor = textColor;
 	m_BkColor = bkColor;
+	m_FrameColor = frameColor;
 
 	return TRUE;
 }
 
-void TextBox::Draw(HDC hDC, const std::wstring& wstrText, TEXTBOX_DRAW_TYPE drawType)
+void TextBox::Draw(HDC hDC, const std::wstring& wstrText, int drawType)
 {
 	if (!(drawType & TEXTBOX_DRAW_TYPE_NONE))
 	{
-		FillRectByFlags(hDC, drawType);
+		FillRectByFlags(hDC, (TEXTBOX_DRAW_TYPE)drawType);
 	}
 
 	::SetTextColor(hDC, m_TextColor);
@@ -36,19 +37,21 @@ void TextBox::Draw(HDC hDC, const std::wstring& wstrText, TEXTBOX_DRAW_TYPE draw
 
 void TextBox::FillRectByFlags(HDC hDC, TEXTBOX_DRAW_TYPE drawType)
 {
-	C_SOLID_HBRUSH brush(m_BkColor);
 	
 	if (drawType & TEXTBOX_DRAW_TYPE_FILL_RECT)
 	{
+		C_SOLID_HBRUSH brush(m_BkColor);
 		FillRect(hDC, &m_Rect, brush);
+		brush.Destroy();
+
 	}
 
 	if (drawType & TEXTBOX_DRAW_TYPE_DRAW_OUTLINE)
 	{
+		C_SOLID_HBRUSH brush(m_FrameColor);
 		FrameRect(hDC, &m_Rect, brush);
+		brush.Destroy();
 	}
-
-	brush.Destroy();
 }
 
 void TextBox::DrawFormattedString(HDC hDC, WndPosition pos, LPCTSTR fmt, ...)

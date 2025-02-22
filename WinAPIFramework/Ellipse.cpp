@@ -25,6 +25,25 @@ BOOL Ellipse::Create(WndSize size, COLORREF frameColor, COLORREF bkColor, PenInf
     return TRUE;
 }
 
+BOOL Ellipse::Create(RECT rect, COLORREF frameColor, COLORREF bkColor, PenInfo penInfo)
+{
+    m_OriginRect = rect;
+
+    m_Size.width = (rect.right - rect.left);
+    m_Size.height = (rect.bottom - rect.top);
+
+    CalculateCenter();
+    CalculateTransfrom();
+
+    m_FrameColor = frameColor;
+    m_BkColor = bkColor;
+
+    m_penInfo = penInfo;
+    m_penInfo.color = frameColor;
+
+    return TRUE;
+}
+
 BOOL Ellipse::Draw(HDC hDC)
 {
     BOOL bResult = TRUE;
@@ -68,6 +87,58 @@ BOOL Ellipse::DrawHatched(HDC hDC, int iHatch)
 
     RECT r = m_Rect;
     CalculateToScreen(r);
+    bResult = ::Ellipse(hDC, r.left, r.top, r.right, r.bottom);
+
+    ::SelectObject(hDC, oldBrush);
+    ::SelectObject(hDC, oldPen);
+
+    hBrush.Destroy();
+    hPen.Destroy();
+
+    return bResult;
+}
+
+BOOL Ellipse::DrawInWindowCoord(HDC hDC)
+{
+    BOOL bResult = TRUE;
+
+    C_SOLID_HBRUSH hBrush(m_BkColor);
+    C_HPEN hPen(m_penInfo.style, m_penInfo.width, m_FrameColor);
+
+    HBRUSH oldBrush = (HBRUSH)SelectObject(hDC, hBrush);
+    HPEN oldPen = (HPEN)::SelectObject(hDC, hPen);
+
+    CalculateTransfrom();
+    CalculateCenter();
+    CalculateSize();
+
+    RECT r = m_Rect;
+    bResult = ::Ellipse(hDC, r.left, r.top, r.right, r.bottom);
+
+    ::SelectObject(hDC, oldBrush);
+    ::SelectObject(hDC, oldPen);
+
+    hBrush.Destroy();
+    hPen.Destroy();
+
+    return bResult;
+}
+
+BOOL Ellipse::DrawHatchedInWindowCoord(HDC hDC, int iHatch)
+{
+    BOOL bResult = TRUE;
+
+    C_HATCH_HBRUSH hBrush(iHatch, m_BkColor);
+    C_HPEN hPen(m_penInfo.style, m_penInfo.width, m_FrameColor);
+
+    HBRUSH oldBrush = (HBRUSH)SelectObject(hDC, hBrush);
+    HPEN oldPen = (HPEN)::SelectObject(hDC, hPen);
+
+    CalculateTransfrom();
+    CalculateCenter();
+    CalculateSize();
+
+    RECT r = m_Rect;
     bResult = ::Ellipse(hDC, r.left, r.top, r.right, r.bottom);
 
     ::SelectObject(hDC, oldBrush);
@@ -386,7 +457,24 @@ void Ellipse::CalculateToScreen(RECT& outRect)
     outRect.bottom += CORE.GetWindowSize().height / 2;
 }
 
-BOOL Ellipse::DrawEllipse(HDC hDC, POINT leftTop, POINT rightBottom)
+BOOL Ellipse::DrawEllipse(HDC hDC, RECT rect, COLORREF bkColor, int frameStyle, int frameWidth, COLORREF frameColor)
 {
-    return ::Ellipse(hDC, leftTop.x, leftTop.y, rightBottom.x, rightBottom.y);
+    BOOL bResult = TRUE;
+
+    C_SOLID_HBRUSH hBrush(bkColor);
+    C_HPEN hPen(frameStyle, frameWidth, frameColor);
+
+    HBRUSH oldBrush = (HBRUSH)SelectObject(hDC, hBrush);
+    HPEN oldPen = (HPEN)::SelectObject(hDC, hPen);
+
+    bResult = ::Ellipse(hDC, rect.left, rect.top, rect.right, rect.bottom);
+
+    ::SelectObject(hDC, oldBrush);
+    ::SelectObject(hDC, oldPen);
+
+    hBrush.Destroy();
+    hPen.Destroy();
+
+    return bResult;
 }
+

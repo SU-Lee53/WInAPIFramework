@@ -67,6 +67,52 @@ BOOL Polygon::DrawHatched(HDC hDC, int iHatch)
     return bResult;
 }
 
+BOOL Polygon::DrawInWindowCoord(HDC hDC)
+{
+    BOOL bResult = TRUE;
+
+    C_SOLID_HBRUSH hBrush(m_BkColor);
+    C_HPEN hPen(m_penInfo.style, m_penInfo.width, m_FrameColor);
+
+    HBRUSH oldBrush = (HBRUSH)SelectObject(hDC, hBrush);
+    HPEN oldPen = (HPEN)::SelectObject(hDC, hPen);
+
+    CalculateTransfrom();
+
+    bResult = ::Polygon(hDC, m_Points.data(), m_Points.size());
+
+    ::SelectObject(hDC, oldBrush);
+    ::SelectObject(hDC, oldPen);
+
+    hBrush.Destroy();
+    hPen.Destroy();
+
+    return bResult;
+}
+
+BOOL Polygon::DrawHatchedInWindowCoord(HDC hDC, int iHatch)
+{
+    BOOL bResult = TRUE;
+
+    C_HATCH_HBRUSH hBrush(iHatch, m_BkColor);
+    C_HPEN hPen(m_penInfo.style, m_penInfo.width, m_FrameColor);
+
+    HBRUSH oldBrush = (HBRUSH)SelectObject(hDC, hBrush);
+    HPEN oldPen = (HPEN)::SelectObject(hDC, hPen);
+
+    CalculateTransfrom();
+
+    bResult = ::Polygon(hDC, m_OriginPoints.data(), m_OriginPoints.size());
+
+    ::SelectObject(hDC, oldBrush);
+    ::SelectObject(hDC, oldPen);
+
+    hBrush.Destroy();
+    hPen.Destroy();
+
+    return bResult;
+}
+
 BOOL Polygon::DrawPolyLine(HDC hDC)
 {
     BOOL bResult = TRUE;
@@ -140,7 +186,23 @@ void Polygon::CalculateToScreen(std::vector<POINT>& newPos)
     }
 }
 
-BOOL Polygon::DrawPolygon(HDC hDC, std::vector<POINT>& points)
+BOOL Polygon::DrawPolygon(HDC hDC, std::vector<POINT>& points, COLORREF bkColor, int frameStyle, int frameWidth, COLORREF frameColor)
 {
-    return ::Polygon(hDC, points.data(), points.size());
+    BOOL bResult = TRUE;
+
+    C_SOLID_HBRUSH hBrush(bkColor);
+    C_HPEN hPen(frameStyle, frameWidth, frameColor);
+
+    HBRUSH oldBrush = (HBRUSH)SelectObject(hDC, hBrush);
+    HPEN oldPen = (HPEN)::SelectObject(hDC, hPen);
+
+    bResult = ::Polygon(hDC, points.data(), points.size());
+
+    ::SelectObject(hDC, oldBrush);
+    ::SelectObject(hDC, oldPen);
+
+    hBrush.Destroy();
+    hPen.Destroy();
+
+    return bResult;
 }

@@ -5,9 +5,12 @@
 
 WPARAM Core::RunWndProgram(const CoreDesc& appDesc)
 {
-	m_Desc = appDesc;
-	m_Desc.app->Initialize();
-	RANDOM.Initialize();
+	// Init Zone 1
+	{
+		m_Desc = appDesc;
+		m_Desc.app->Initialize();
+		RANDOM.Initialize();
+	}
 
 	m_WindowSize = WndSize{ m_Desc.app->GetAppDesc().wndSize.width, m_Desc.app->GetAppDesc().wndSize.height };
 
@@ -20,6 +23,11 @@ WPARAM Core::RunWndProgram(const CoreDesc& appDesc)
 	}
 
 	MSG msg;
+	
+	// Init Zone 2
+	{
+		TIMER.Initialize(m_Desc.hWnd);
+	}
 
 	while (GetMessage(&msg, 0, 0, 0))
 	{

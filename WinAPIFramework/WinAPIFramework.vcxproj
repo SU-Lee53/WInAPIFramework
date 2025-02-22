@@ -38,6 +38,12 @@
     <ClCompile Include="Demo2023\Demo2_11.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Demo2023\Demo2_12.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Demo2023\Demo2_13.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="Demo2023\Demo2_2.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
@@ -59,7 +65,11 @@
     <ClCompile Include="Demo2023\Demo2_9.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Demo2023\Demo3_1.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="Ellipse.cpp" />
+    <ClCompile Include="InputManager.cpp" />
     <ClCompile Include="Line.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="pch.cpp">
@@ -69,7 +79,10 @@
     <ClCompile Include="Polygon.cpp" />
     <ClCompile Include="RandomGenerator.cpp" />
     <ClCompile Include="Rectangle.cpp" />
+    <ClCompile Include="Shapes.cpp" />
     <ClCompile Include="TextBox.cpp" />
+    <ClCompile Include="Timer.cpp" />
+    <ClCompile Include="TimerManager.cpp" />
     <ClCompile Include="Utils.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -83,6 +96,8 @@
     <ClInclude Include="Demo2023\Demo2_1.h" />
     <ClInclude Include="Demo2023\Demo2_10.h" />
     <ClInclude Include="Demo2023\Demo2_11.h" />
+    <ClInclude Include="Demo2023\Demo2_12.h" />
+    <ClInclude Include="Demo2023\Demo2_13.h" />
     <ClInclude Include="Demo2023\Demo2_2.h" />
     <ClInclude Include="Demo2023\Demo2_3.h" />
     <ClInclude Include="Demo2023\Demo2_4.h" />
@@ -90,14 +105,19 @@
     <ClInclude Include="Demo2023\Demo2_7.h" />
     <ClInclude Include="Demo2023\Demo2_8.h" />
     <ClInclude Include="Demo2023\Demo2_9.h" />
+    <ClInclude Include="Demo2023\Demo3_1.h" />
     <ClInclude Include="Ellipse.h" />
+    <ClInclude Include="InputManager.h" />
     <ClInclude Include="Line.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Pixel.h" />
     <ClInclude Include="Polygon.h" />
     <ClInclude Include="RandomGenerator.h" />
     <ClInclude Include="Rectangle.h" />
+    <ClInclude Include="Shapes.h" />
     <ClInclude Include="TextBox.h" />
+    <ClInclude Include="Timer.h" />
+    <ClInclude Include="TimerManager.h" />
     <ClInclude Include="Types.h" />
     <ClInclude Include="Utils.h" />
     <ClInclude Include="WinObjWrapper.h" />

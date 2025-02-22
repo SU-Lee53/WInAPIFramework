@@ -23,7 +23,8 @@ public:
 		std::random_device rd;
 		std::mt19937 gen(rd());
 
-		T res;
+		T res = 0;
+
 		if constexpr (std::is_same_v<T, int>)
 		{
 			std::uniform_int_distribution<T> dis(min, max);
