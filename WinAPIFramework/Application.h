@@ -1,4 +1,5 @@
 #pragma once
+#include "TextBox.h"
 
 enum APP_RUN_MODE
 {
@@ -37,6 +38,20 @@ public:
 	virtual void Update() { if (m_AppDesc.appRunMode == APP_RUN_MODE_WNDPROC) __debugbreak(); };
 	virtual void Draw(HDC hDC) { if (m_AppDesc.appRunMode == APP_RUN_MODE_WNDPROC) __debugbreak(); };
 	virtual void Destroy();
+
+	void DrawCoord(HDC hDC)
+	{
+		// µð¹ö±×¿ë ÁÂÇ¥Âï±â
+		for (int i = 0; i < (m_AppDesc.wndSize.width / 100) + 1; i++)
+		{
+			TextBox::DrawFormattedString(hDC, { (ULONG)(i * 100), 0 }, L"%d", i * 100);
+		}
+
+		for (int i = 0; i < (m_AppDesc.wndSize.height / 100) + 1; i++)
+		{
+			TextBox::DrawFormattedString(hDC, { 0, (ULONG)(i * 100) }, L"%d", i * 100);
+		}
+	}
 
 public:
 	WNDPROC GetWndProc() { return m_pProcFunction; }

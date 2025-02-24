@@ -36,6 +36,13 @@
 #include "Rectangle.h"
 #include "Polygon.h"
 
+#include "GameObject.h"
+
+// Utils
+#include "Utils.h"
+
+
+
 // Debugs
 #ifdef _DEBUG
 

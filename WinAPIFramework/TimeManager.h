@@ -14,8 +14,12 @@ public:
 
 	UINT64 GetCurrent()
 	{
-		return ::QueryPerformanceCounter(reinterpret_cast<LARGE_INTEGER*>(&_prevCount));
+		UINT64 currentCount;
+		::QueryPerformanceCounter(reinterpret_cast<LARGE_INTEGER*>(&currentCount));
+		return currentCount;
 	}
+
+	LARGE_INTEGER* GetFrequency() { return reinterpret_cast<LARGE_INTEGER*>(&_frequency); }
 
 private:
 	UINT64	_frequency = 0;

@@ -15,6 +15,9 @@ enum class KEY_TYPE
 	LSHIFT = VK_LSHIFT,
 	RSHIFT = VK_RSHIFT,
 
+	PLUS = VK_ADD,
+	MINUS = VK_SUBTRACT,
+
 	A = 'A',
 	B = 'B',
 	C = 'C',

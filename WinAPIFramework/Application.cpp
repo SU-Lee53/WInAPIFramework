@@ -43,7 +43,7 @@ BOOL Application::BeginDoubleBuffering(HWND hWnd)
 
 	C_SOLID_HBRUSH hBrush(RGB(255, 255, 255));
 	m_Rect = C_RECT(0, 0, m_AppDesc.wndSize.width, m_AppDesc.wndSize.height);
-	FillRect(m_hMemDC, &m_Rect, hBrush);
+	::FillRect(m_hMemDC, &m_Rect, hBrush);
 	hBrush.Destroy();
 
     return 0;
@@ -52,5 +52,8 @@ BOOL Application::BeginDoubleBuffering(HWND hWnd)
 BOOL Application::EndDoubleBuffering(HWND hWnd)
 {
 	::BitBlt(m_hCurDC, 0, 0, m_Rect.right, m_Rect.bottom, m_hMemDC, 0, 0, SRCCOPY);
+	::DeleteDC(m_hMemDC);
+	::DeleteObject(m_hMemBitmap);
+	::ReleaseDC(hWnd, m_hCurDC);
     return 0;
 }

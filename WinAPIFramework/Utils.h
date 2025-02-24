@@ -41,5 +41,15 @@ public:
 		std::string res(lpOut, _countof(lpOut));
 		return res;
 	}
-};
 
+	void CheckGDIUsage() 
+	{
+		DWORD processID = GetCurrentProcessId();
+		HANDLE hProcess = OpenProcess(PROCESS_QUERY_INFORMATION, FALSE, processID);
+		if (hProcess) {
+			DWORD gdiCount = GetGuiResources(hProcess, GR_GDIOBJECTS);
+			std::cout << "GDI Objects: " << gdiCount << std::endl;
+			CloseHandle(hProcess);
+		}
+	}
+};

@@ -43,6 +43,13 @@ BOOL Rectangle::Create(RECT rect, COLORREF frameColor, COLORREF bkColor, PenInfo
     return TRUE;
 }
 
+void Rectangle::Update()
+{
+    CalculateTransfrom();
+    CalculateCenter();
+    CalculateSize();
+}
+
 BOOL Rectangle::Draw(HDC hDC)
 {
     BOOL bResult = TRUE;
@@ -279,7 +286,7 @@ BOOL Rectangle::DrawRectangle(HDC hDC, RECT rect, COLORREF bkColor, int frameSty
     HBRUSH oldBrush = (HBRUSH)SelectObject(hDC, hBrush);
     HPEN oldPen = (HPEN)::SelectObject(hDC, hPen);
 
-    bResult = ::Ellipse(hDC, rect.left, rect.top, rect.right, rect.bottom);
+    bResult = ::Rectangle(hDC, rect.left, rect.top, rect.right, rect.bottom);
 
     ::SelectObject(hDC, oldBrush);
     ::SelectObject(hDC, oldPen);

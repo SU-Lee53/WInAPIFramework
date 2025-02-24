@@ -8,6 +8,9 @@ public:
 	~Shapes() {}
 
 public:
+	virtual void Update() {}
+
+public:
 	virtual BOOL Draw(HDC hDC) { __debugbreak(); return FALSE; }
 	virtual BOOL DrawHatched(HDC hDC, int iHatch) { __debugbreak(); return FALSE; }
 	

@@ -90,14 +90,20 @@ BOOL Core::InitInstance(int cmdShow)
 {
 	BOOL bResult = TRUE;
 
+	RECT rect{ 0, 0, m_Desc.app->GetAppDesc().wndSize.width , m_Desc.app->GetAppDesc().wndSize.height };
+	AdjustWindowRect(&rect, m_Desc.app->GetAppDesc().wndStyle, FALSE);
+
+	int windowWidth = rect.right - rect.left;
+	int windowHeight = rect.bottom - rect.top;
+
 	m_Desc.hWnd = ::CreateWindow(
 		m_Desc.app->GetAppDesc().className.c_str(),
 		m_Desc.app->GetAppDesc().wndName.c_str(),
 		m_Desc.app->GetAppDesc().wndStyle,
 		m_Desc.app->GetAppDesc().wndPosition.x,
 		m_Desc.app->GetAppDesc().wndPosition.y,
-		m_Desc.app->GetAppDesc().wndSize.width,
-		m_Desc.app->GetAppDesc().wndSize.height,
+		windowWidth,
+		windowHeight,
 		NULL,
 		NULL,
 		m_Desc.hInstance,
@@ -112,6 +118,10 @@ BOOL Core::InitInstance(int cmdShow)
 
 void Core::Update()
 {
+	INPUT.Update();
+	TIME.Update();
+
+
 	m_Desc.app->Update();
 }
 

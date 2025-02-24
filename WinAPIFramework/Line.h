@@ -10,7 +10,7 @@ public:
 	~Line() {}
 
 public:
-	BOOL Create(POINT startPos, POINT endPos, int frameStype = PS_SOLID, int frameWidth = 1, COLORREF frameColor = RGB(0, 0, 0));
+	BOOL Create(POINT startPos, POINT endPos, int lineStype = PS_SOLID, int lineWidth = 1, COLORREF lineColor = RGB(0, 0, 0));
 	virtual BOOL Draw(HDC hDC) override;
 	virtual BOOL DrawInWindowCoord(HDC hDC) override;
 
@@ -22,7 +22,7 @@ public:
 	POINT GetEndPos() { return m_endPos; }
 
 public:
-	static BOOL DrawLine(HDC hDC, POINT start, POINT end);
+	static BOOL DrawLine(HDC hDC, POINT start, POINT end, int lineStyle = PS_SOLID, int lineWidth = 1, COLORREF lineColor = RGB(0, 0, 0));
 
 private:
 	void CalculateTransfrom();

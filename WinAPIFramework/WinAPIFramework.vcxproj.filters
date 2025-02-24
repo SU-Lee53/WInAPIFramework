@@ -43,6 +43,12 @@
     <Filter Include="Managers">
       <UniqueIdentifier>{64eea38b-4cba-45db-9430-42c24dc3928f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="DemoHelper">
+      <UniqueIdentifier>{b1efdc83-d731-48d0-bc07-2a74df5d1f49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DemoHelper\GameObject">
+      <UniqueIdentifier>{501e0da7-2730-4d0e-836f-21644ed19484}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -142,7 +148,24 @@
     <ClCompile Include="InputManager.cpp">
       <Filter>Managers</Filter>
     </ClCompile>
-    <ClCompile Include="TimeManager.cpp" />
+    <ClCompile Include="GameBoard.cpp">
+      <Filter>DemoHelper</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo2023\Demo3_2.cpp">
+      <Filter>Application\Demos\Chapter3</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo2023\Demo3_3.cpp">
+      <Filter>Application\Demos\Chapter3</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo2023\Demo3_4.cpp">
+      <Filter>Application\Demos\Chapter3</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>DemoHelper\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeManager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core.h">
@@ -250,6 +273,23 @@
     <ClInclude Include="InputManager.h">
       <Filter>Managers</Filter>
     </ClInclude>
-    <ClInclude Include="TimeManager.h" />
+    <ClInclude Include="GameBoard.h">
+      <Filter>DemoHelper</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo2023\Demo3_2.h">
+      <Filter>Application\Demos\Chapter3</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo2023\Demo3_3.h">
+      <Filter>Application\Demos\Chapter3</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo2023\Demo3_4.h">
+      <Filter>Application\Demos\Chapter3</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>DemoHelper\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeManager.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

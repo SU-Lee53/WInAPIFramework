@@ -17,6 +17,11 @@ BOOL Polygon::Create(std::vector<POINT>& points, COLORREF frameColor, COLORREF b
     return TRUE;
 }
 
+void Polygon::Update()
+{
+    CalculateTransfrom();
+}
+
 BOOL Polygon::Draw(HDC hDC)
 {
     BOOL bResult = TRUE;

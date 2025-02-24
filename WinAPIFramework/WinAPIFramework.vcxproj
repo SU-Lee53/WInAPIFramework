@@ -68,7 +68,18 @@
     <ClCompile Include="Demo2023\Demo3_1.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Demo2023\Demo3_2.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Demo2023\Demo3_3.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Demo2023\Demo3_4.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="Ellipse.cpp" />
+    <ClCompile Include="GameBoard.cpp" />
+    <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="InputManager.cpp" />
     <ClCompile Include="Line.cpp" />
     <ClCompile Include="main.cpp" />
@@ -107,7 +118,12 @@
     <ClInclude Include="Demo2023\Demo2_8.h" />
     <ClInclude Include="Demo2023\Demo2_9.h" />
     <ClInclude Include="Demo2023\Demo3_1.h" />
+    <ClInclude Include="Demo2023\Demo3_2.h" />
+    <ClInclude Include="Demo2023\Demo3_3.h" />
+    <ClInclude Include="Demo2023\Demo3_4.h" />
     <ClInclude Include="Ellipse.h" />
+    <ClInclude Include="GameBoard.h" />
+    <ClInclude Include="GameObject.h" />
     <ClInclude Include="InputManager.h" />
     <ClInclude Include="Line.h" />
     <ClInclude Include="pch.h" />

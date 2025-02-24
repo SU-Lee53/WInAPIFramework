@@ -44,6 +44,13 @@ BOOL Ellipse::Create(RECT rect, COLORREF frameColor, COLORREF bkColor, PenInfo p
     return TRUE;
 }
 
+void Ellipse::Update()
+{
+    CalculateTransfrom();
+    CalculateCenter();
+    CalculateSize();
+}
+
 BOOL Ellipse::Draw(HDC hDC)
 {
     BOOL bResult = TRUE;

@@ -61,12 +61,18 @@ BOOL Line::DrawInWindowCoord(HDC hDC)
     return bResult;
 }
 
-BOOL Line::DrawLine(HDC hDC, POINT start, POINT end)
+BOOL Line::DrawLine(HDC hDC, POINT start, POINT end, int lineStyle, int lineWidth, COLORREF lineColor)
 {
     BOOL bResult = TRUE;
 
+    C_HPEN hPen(lineStyle, lineWidth, lineColor);
+    HPEN oldPen = (HPEN)::SelectObject(hDC, hPen);
+
     bResult = ::MoveToEx(hDC, start.x, start.y, NULL);
     bResult = ::LineTo(hDC, end.x, end.y);
+
+    ::SelectObject(hDC, oldPen);
+    hPen.Destroy();
 
     return bResult;
 }

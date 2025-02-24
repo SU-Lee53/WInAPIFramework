@@ -12,6 +12,11 @@ public:
 public:
 	BOOL Create(std::vector<POINT>& points, COLORREF frameColor = 0x000000, COLORREF bkColor = 0xffffff, PenInfo penInfo = PenInfo{ PS_SOLID, 1, RGB(0,0,0) });
 	
+
+public:
+	virtual void Update() override;
+
+
 public:
 	virtual BOOL Draw(HDC hDC) override;
 	virtual BOOL DrawHatched(HDC hDC, int iHatch) override;
