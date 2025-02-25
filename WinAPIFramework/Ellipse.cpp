@@ -389,6 +389,10 @@ BOOL Ellipse::DrawPieHatched(HDC hDC, int iHatch, float beginDegree, float endDe
 
 POINT Ellipse::DegreeToPoint(float degree)
 {
+    CalculateTransfrom();
+    CalculateCenter();
+    CalculateSize();
+
     float rad = -((degree) * (3.14159265358979f / 180.0f));
 
     POINT p;

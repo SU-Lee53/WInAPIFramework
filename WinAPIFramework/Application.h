@@ -20,7 +20,7 @@ struct AppDesc
 
 	std::wstring className = L"WndProgram";
 	std::wstring wndName = L"";
-	std::wstring menuName = L"";
+	int menuName = 0;
 
 	APP_RUN_MODE appRunMode = APP_RUN_MODE_WNDPROC;
 
@@ -80,6 +80,7 @@ protected:
 	// Win object resources
 	PaintResource m_PaintResource = {};
 
+private:
 	// Double Buffering Resources
 	RECT m_Rect = {};
 	HDC m_hCurDC = nullptr;

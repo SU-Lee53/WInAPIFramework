@@ -49,6 +49,15 @@
     <Filter Include="DemoHelper\GameObject">
       <UniqueIdentifier>{501e0da7-2730-4d0e-836f-21644ed19484}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Application\Demos\Chapter4">
+      <UniqueIdentifier>{d10531be-cdb4-43d5-ba63-8b79f1cbbca5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{aec2b353-2598-49a6-bcfd-718fa8a2d334}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Demos\Chapter5">
+      <UniqueIdentifier>{707eb646-32ac-4be8-939b-3c1dce66d96c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -166,6 +175,22 @@
     <ClCompile Include="TimeManager.cpp">
       <Filter>Managers</Filter>
     </ClCompile>
+    <ClCompile Include="Demo2023\Demo4_1.cpp">
+      <Filter>Application\Demos\Chapter4</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo2023\Demo4_2.cpp">
+      <Filter>Application\Demos\Chapter4</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo2023\Demo4_3.cpp">
+      <Filter>Application\Demos\Chapter4</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo2023\Demo4_4.cpp">
+      <Filter>Application\Demos\Chapter4</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo2023\Demo5_1.cpp">
+      <Filter>Application\Demos\Chapter5</Filter>
+    </ClCompile>
+    <ClCompile Include="Bitmap.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core.h">
@@ -291,5 +316,37 @@
     <ClInclude Include="TimeManager.h">
       <Filter>Managers</Filter>
     </ClInclude>
+    <ClInclude Include="Demo2023\Demo4_1.h">
+      <Filter>Application\Demos\Chapter4</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo2023\Demo4_2.h">
+      <Filter>Application\Demos\Chapter4</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo2023\Demo4_3.h">
+      <Filter>Application\Demos\Chapter4</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo2023\Demo4_4.h">
+      <Filter>Application\Demos\Chapter4</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo2023\Demo5_1.h">
+      <Filter>Application\Demos\Chapter5</Filter>
+    </ClInclude>
+    <ClInclude Include="Bitmap.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="WinAPIFramework.rc">
+      <Filter>Resources</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\..\Downloads\sample_1280×853.bmp" />
+    <Image Include="..\..\..\..\Downloads\Soviet_BMP-1_IFV.bmp" />
+    <Image Include="bitmap1.bmp" />
+    <Image Include="Soviet_BMP-1_IFV.bmp" />
+    <Image Include="bitmap2.bmp" />
+    <Image Include="bmp1.bmp" />
   </ItemGroup>
 </Project>

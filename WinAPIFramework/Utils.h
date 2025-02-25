@@ -42,14 +42,22 @@ public:
 		return res;
 	}
 
-	void CheckGDIUsage() 
+	static COLORREF AddColorRef(COLORREF color1, COLORREF color2)
 	{
-		DWORD processID = GetCurrentProcessId();
-		HANDLE hProcess = OpenProcess(PROCESS_QUERY_INFORMATION, FALSE, processID);
-		if (hProcess) {
-			DWORD gdiCount = GetGuiResources(hProcess, GR_GDIOBJECTS);
-			std::cout << "GDI Objects: " << gdiCount << std::endl;
-			CloseHandle(hProcess);
-		}
+		BYTE r = min(255, GetRValue(color1) + GetRValue(color2));
+		BYTE g = min(255, GetGValue(color1) + GetGValue(color2));
+		BYTE b = min(255, GetBValue(color1) + GetBValue(color2));
+
+		return RGB(r, g, b);
 	}
+
+	static inline COLORREF InvertColor(COLORREF color)
+	{
+		BYTE r = 255 - GetRValue(color);
+		BYTE g = 255 - GetGValue(color);
+		BYTE b = 255 - GetBValue(color);
+
+		return RGB(r, g, b);
+	}
+
 };

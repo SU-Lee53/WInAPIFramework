@@ -22,6 +22,17 @@ public:
 	int GetOffsetX() { return m_offsetX; }
 	int GetOffsetY() { return m_offsetY; }
 
+	void SetCellColor(UINT row, UINT col, COLORREF color);
+	COLORREF GetCellColor(UINT row, UINT col);
+
+	RECT GetCellRect(UINT row, UINT col);
+
+	void SetFrameStyle(int style) { m_pBoardRect->SetFrameStyle(style); }
+	void SetFrameWidth(int width) { m_pBoardRect->SetFrameWidth(width); }
+	void SetFrameColor(COLORREF color) { m_pBoardRect->SetFrameColor(color); }
+
+	WndSize GetCellSize() { return m_cellSize; }
+
 public:
 	POINT PointToBoardCoord(POINT pt)
 	{
@@ -38,5 +49,10 @@ private:
 
 	int m_offsetX = 0;
 	int m_offsetY = 0;
+
+	WndSize m_cellSize = { 0,0 };
+
+	std::vector<COLORREF> m_cellColor = {};
+
 };
 

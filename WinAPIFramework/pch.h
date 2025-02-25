@@ -21,6 +21,9 @@
 #include "WinObjWrapper.h"
 #include "RandomGenerator.h"
 
+// Resources
+#include "resource.h"
+
 // Manager
 #include "TimerManager.h"
 #include "InputManager.h"
@@ -40,8 +43,6 @@
 
 // Utils
 #include "Utils.h"
-
-
 
 // Debugs
 #ifdef _DEBUG

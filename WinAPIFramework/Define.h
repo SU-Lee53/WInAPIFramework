@@ -20,6 +20,8 @@ public:										\
 #define INPUT						GET_SINGLE(InputManager)
 #define TIME						GET_SINGLE(TimeManager)
 
+#define DELTA_T							TIME.GetDeltaTime()
+
 #define CORE_DESC					CORE.GetDesc()
 #define CUR_HWND					CORE.GetDesc().hWnd
 

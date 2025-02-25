@@ -91,7 +91,12 @@ BOOL Core::InitInstance(int cmdShow)
 	BOOL bResult = TRUE;
 
 	RECT rect{ 0, 0, m_Desc.app->GetAppDesc().wndSize.width , m_Desc.app->GetAppDesc().wndSize.height };
-	AdjustWindowRect(&rect, m_Desc.app->GetAppDesc().wndStyle, FALSE);
+	
+	if(m_Desc.app->GetAppDesc().menuName == 0)
+		AdjustWindowRect(&rect, m_Desc.app->GetAppDesc().wndStyle, FALSE);
+	else
+		AdjustWindowRect(&rect, m_Desc.app->GetAppDesc().wndStyle, TRUE);
+	
 
 	int windowWidth = rect.right - rect.left;
 	int windowHeight = rect.bottom - rect.top;
@@ -109,6 +114,13 @@ BOOL Core::InitInstance(int cmdShow)
 		m_Desc.hInstance,
 		NULL
 	);
+
+	if (m_Desc.app->GetAppDesc().menuName != 0)
+	{
+		HMENU hMenu = LoadMenu(m_Desc.hInstance, MAKEINTRESOURCE(m_Desc.app->GetAppDesc().menuName));
+		SetMenu(m_Desc.hWnd, hMenu);
+	}
+
 
 	bResult = ::ShowWindow(m_Desc.hWnd, cmdShow);
 	bResult = ::UpdateWindow(m_Desc.hWnd);

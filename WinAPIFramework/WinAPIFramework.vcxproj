@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp" />
+    <ClCompile Include="Bitmap.cpp" />
     <ClCompile Include="Caret.cpp" />
     <ClCompile Include="Demo0.cpp" />
     <ClCompile Include="Core.cpp" />
@@ -77,6 +78,21 @@
     <ClCompile Include="Demo2023\Demo3_4.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Demo2023\Demo4_1.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Demo2023\Demo4_2.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Demo2023\Demo4_3.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Demo2023\Demo4_4.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Demo2023\Demo5_1.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="Ellipse.cpp" />
     <ClCompile Include="GameBoard.cpp" />
     <ClCompile Include="GameObject.cpp" />
@@ -99,6 +115,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application.h" />
+    <ClInclude Include="Bitmap.h" />
     <ClInclude Include="Caret.h" />
     <ClInclude Include="Define.h" />
     <ClInclude Include="Demo0.h" />
@@ -121,6 +138,11 @@
     <ClInclude Include="Demo2023\Demo3_2.h" />
     <ClInclude Include="Demo2023\Demo3_3.h" />
     <ClInclude Include="Demo2023\Demo3_4.h" />
+    <ClInclude Include="Demo2023\Demo4_1.h" />
+    <ClInclude Include="Demo2023\Demo4_2.h" />
+    <ClInclude Include="Demo2023\Demo4_3.h" />
+    <ClInclude Include="Demo2023\Demo4_4.h" />
+    <ClInclude Include="Demo2023\Demo5_1.h" />
     <ClInclude Include="Ellipse.h" />
     <ClInclude Include="GameBoard.h" />
     <ClInclude Include="GameObject.h" />
@@ -131,6 +153,7 @@
     <ClInclude Include="Polygon.h" />
     <ClInclude Include="RandomGenerator.h" />
     <ClInclude Include="Rectangle.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="Shapes.h" />
     <ClInclude Include="TextBox.h" />
     <ClInclude Include="TimeManager.h" />
@@ -139,6 +162,17 @@
     <ClInclude Include="Types.h" />
     <ClInclude Include="Utils.h" />
     <ClInclude Include="WinObjWrapper.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="WinAPIFramework.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\..\Downloads\sample_1280×853.bmp" />
+    <Image Include="..\..\..\..\Downloads\Soviet_BMP-1_IFV.bmp" />
+    <Image Include="bitmap1.bmp" />
+    <Image Include="bitmap2.bmp" />
+    <Image Include="bmp1.bmp" />
+    <Image Include="Soviet_BMP-1_IFV.bmp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

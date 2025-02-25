@@ -1,6 +1,6 @@
 #pragma once
 
-class GameObject
+class GameObject : public std::enable_shared_from_this<GameObject>
 {
 public:
 	GameObject() {}
@@ -41,7 +41,6 @@ public:
 	void SetBackgroundColor(COLORREF color) { m_BkColor = color; }
 	void SetFrameColor(COLORREF color) { m_FrameColor = color; }
 	void SetFrameWidth(int width) { m_FrameWidth = width; }
-
 
 protected:
 	std::shared_ptr<Shapes> m_pModel = nullptr;

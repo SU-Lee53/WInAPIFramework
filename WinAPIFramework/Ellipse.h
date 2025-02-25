@@ -30,7 +30,7 @@ public:
 	BOOL DrawChordHatched(HDC hDC, int iHatch, float beginDegree, float endDegree);
 	BOOL DrawPieHatched(HDC hDC, int iHatch, float beginDegree, float endDegree);
 
-private:
+public:
 	POINT DegreeToPoint(float degree);
 
 public:
