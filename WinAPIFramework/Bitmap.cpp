@@ -56,7 +56,7 @@ BOOL Bitmap::DrawInRect(HDC hDC, RECT r, RECT srcRect, DWORD Rop)
 
 	HDC memDC = CreateCompatibleDC(hDC);
 
-	POINT size = { srcRect.right, srcRect.bottom };
+	POINT size = { srcRect.right - srcRect.left, srcRect.bottom - srcRect.top };
 
 	if (size.x == -1 || size.y == -1)
 	{
@@ -65,7 +65,7 @@ BOOL Bitmap::DrawInRect(HDC hDC, RECT r, RECT srcRect, DWORD Rop)
 
 
 	SelectObject(memDC, m_hBitmap);
-	bResult = StretchBlt(hDC, r.left, r.top, r.right, r.bottom, memDC, srcRect.left, srcRect.top, size.x, size.y , Rop);
+	bResult = StretchBlt(hDC, r.left, r.top, r.right - r.left, r.bottom - r.top, memDC, srcRect.left, srcRect.top, size.x, size.y , Rop);
 
 	bResult = DeleteObject(memDC);
 

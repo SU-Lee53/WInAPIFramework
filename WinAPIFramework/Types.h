@@ -21,6 +21,8 @@ struct WndPosition
 	};
 };
 
+using POS = WndPosition;
+
 struct PenInfo
 {
 	int style = PS_SOLID;

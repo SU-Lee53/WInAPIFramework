@@ -191,6 +191,9 @@
       <Filter>Application\Demos\Chapter5</Filter>
     </ClCompile>
     <ClCompile Include="Bitmap.cpp" />
+    <ClCompile Include="Demo2023\Demo5_2.cpp">
+      <Filter>Application\Demos\Chapter5</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core.h">
@@ -335,6 +338,9 @@
       <Filter>Application\Demos\Chapter5</Filter>
     </ClInclude>
     <ClInclude Include="Bitmap.h" />
+    <ClInclude Include="Demo2023\Demo5_2.h">
+      <Filter>Application\Demos\Chapter5</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="WinAPIFramework.rc">

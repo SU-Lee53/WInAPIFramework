@@ -39,6 +39,7 @@
 #include "Rectangle.h"
 #include "Polygon.h"
 
+#include "Bitmap.h"
 #include "GameObject.h"
 
 // Utils

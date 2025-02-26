@@ -1,8 +1,11 @@
 #pragma once
 
 #include <random>
+#include <algorithm>
+#include <span>
+
 template<typename C>
-concept randomType = requires(C c)
+concept RandomType = requires(C c)
 {
 	std::same_as<C, int> | std::same_as<C, float>;
 };
@@ -17,7 +20,7 @@ public:
 		return TRUE;
 	}
 
-	template <randomType T>
+	template <RandomType T>
 	T GenerateRandom(T min, T max)
 	{
 		std::random_device rd;
@@ -70,6 +73,22 @@ public:
 		p.y = static_cast<LONG>(dis(gen));
 
 		return p;
+	}
+
+	std::vector<int> GenerateRandomIntegerSequence(int min = 0, int max = 100)
+	{
+		std::vector<int> vec;
+		for (int i = min; i <= max; i++)
+		{
+			vec.push_back(i);
+		}
+
+		std::random_device rd;
+		std::mt19937 gen(rd());
+
+		std::shuffle(vec.begin(), vec.end(), gen);
+
+		return vec;
 	}
 
 };

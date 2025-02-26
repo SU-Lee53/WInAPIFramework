@@ -7,6 +7,7 @@
 #define IDR_MENU_4_3                    105
 #define IDR_MENU_4_4                    108
 #define IDB_BITMAP1                     115
+#define IDR_MENU_5_2                    118
 #define ID_GAME_START                   40001
 #define ID_GAME_RESET                   40002
 #define ID_GAME_END                     40003
@@ -57,13 +58,22 @@
 #define ID_TRAFFICLIGHT_BLUE            40048
 #define ID_TRAFFICLIGHT_AUTO            40049
 #define ID_CROSS_CROSSING               40050
+#define ID_IMAGE_1                      40051
+#define ID_IMAGE_2                      40052
+#define ID_DIVIDE_3                     40053
+#define ID_DIVIDE_4                     40054
+#define ID_DIVIDE_5                     40055
+#define ID_GAME_START40056              40056
+#define ID_GAME_SHOWANSWER              40057
+#define ID_GAME_INVERT                  40058
+#define ID_GAME_STOP                    40059
 
 // Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        118
-#define _APS_NEXT_COMMAND_VALUE         40051
+#define _APS_NEXT_RESOURCE_VALUE        119
+#define _APS_NEXT_COMMAND_VALUE         40060
 #define _APS_NEXT_CONTROL_VALUE         1001
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
