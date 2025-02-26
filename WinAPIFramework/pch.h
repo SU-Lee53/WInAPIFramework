@@ -15,6 +15,12 @@
 #include <Windows.h>
 #include <tchar.h>
 
+// msimg32
+#pragma comment (lib, "msimg32.lib")
+
+// atlImage
+#include <atlimage.h>
+
 // Additional User Headers
 #include "Define.h"
 #include "Types.h"
@@ -41,6 +47,9 @@
 
 #include "Bitmap.h"
 #include "GameObject.h"
+#include "Animation.h"
+#include "Image.h"
+#include "Dialog.h"
 
 // Utils
 #include "Utils.h"

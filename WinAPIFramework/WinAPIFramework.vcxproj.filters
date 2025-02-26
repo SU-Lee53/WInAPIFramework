@@ -58,6 +58,9 @@
     <Filter Include="Application\Demos\Chapter5">
       <UniqueIdentifier>{707eb646-32ac-4be8-939b-3c1dce66d96c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Application\Demos\Chapter6">
+      <UniqueIdentifier>{ae16e503-02a9-40df-8dfd-a17e89dff708}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -190,10 +193,21 @@
     <ClCompile Include="Demo2023\Demo5_1.cpp">
       <Filter>Application\Demos\Chapter5</Filter>
     </ClCompile>
-    <ClCompile Include="Bitmap.cpp" />
     <ClCompile Include="Demo2023\Demo5_2.cpp">
       <Filter>Application\Demos\Chapter5</Filter>
     </ClCompile>
+    <ClCompile Include="Bitmap.cpp">
+      <Filter>WinObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo2023\Demo5_4.cpp">
+      <Filter>Application\Demos\Chapter5</Filter>
+    </ClCompile>
+    <ClCompile Include="Animation.cpp" />
+    <ClCompile Include="Image.cpp" />
+    <ClCompile Include="Demo2023\Demo6_1.cpp">
+      <Filter>Application\Demos\Chapter6</Filter>
+    </ClCompile>
+    <ClCompile Include="Dialog.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core.h">
@@ -337,10 +351,21 @@
     <ClInclude Include="Demo2023\Demo5_1.h">
       <Filter>Application\Demos\Chapter5</Filter>
     </ClInclude>
-    <ClInclude Include="Bitmap.h" />
     <ClInclude Include="Demo2023\Demo5_2.h">
       <Filter>Application\Demos\Chapter5</Filter>
     </ClInclude>
+    <ClInclude Include="Bitmap.h">
+      <Filter>WinObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo2023\Demo5_4.h">
+      <Filter>Application\Demos\Chapter5</Filter>
+    </ClInclude>
+    <ClInclude Include="Animation.h" />
+    <ClInclude Include="Image.h" />
+    <ClInclude Include="Demo2023\Demo6_1.h">
+      <Filter>Application\Demos\Chapter6</Filter>
+    </ClInclude>
+    <ClInclude Include="Dialog.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="WinAPIFramework.rc">
@@ -348,11 +373,11 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\..\..\..\Downloads\sample_1280×853.bmp" />
-    <Image Include="..\..\..\..\Downloads\Soviet_BMP-1_IFV.bmp" />
+    <Text Include="Demo2023\about chapter5 demos.txt">
+      <Filter>Application\Demos\Chapter5</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
     <Image Include="bitmap1.bmp" />
-    <Image Include="Soviet_BMP-1_IFV.bmp" />
-    <Image Include="bitmap2.bmp" />
-    <Image Include="bmp1.bmp" />
   </ItemGroup>
 </Project>

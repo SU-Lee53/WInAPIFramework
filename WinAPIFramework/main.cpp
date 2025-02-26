@@ -3,8 +3,6 @@
 
 // Demos
 #include "Demo0.h"
-#include "Demo2023/Demo5_1.h"
-#include "Demo2023/Demo5_2.h"
 
 #ifdef _DEBUG
 #define _CRTDBG_MAP_ALLOC
@@ -23,7 +21,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevInstance, LPSTR lpszCmdPar
 	{
 		desc.hInstance = hInstance;
 		desc.hWnd = NULL;
-		desc.app = std::make_shared<Demo5_2>();
+		desc.app = std::make_shared<Demo0>();
 	}
 
 	CORE.RunWndProgram(desc);
