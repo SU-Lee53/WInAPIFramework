@@ -20,11 +20,11 @@ public:
 	HWND m_hDlg = 0;
 };
 
-class ModallessDialog
+class ModalessDialog
 {
 public:
-	ModallessDialog() {}
-	~ModallessDialog() {}
+	ModalessDialog() {}
+	~ModalessDialog() {}
 
 public:
 	BOOL Create(int dialogMacro, DLGPROC m_DialogFunc = NULL);
@@ -32,6 +32,8 @@ public:
 	void DestroyDialog();
 
 	void SetControlState(int controlMacro, BOOL bEnable);
+
+	RECT GetDialogSize();
 
 public:
 	DLGPROC m_dialogFunc = NULL;

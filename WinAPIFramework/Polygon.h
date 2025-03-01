@@ -38,7 +38,8 @@ private:
 	void CalculateToScreen(std::vector<POINT>& newPos);
 
 public:
-	static BOOL DrawPolygon(HDC hDC, std::vector<POINT>& points, COLORREF bkColor = 0xffffff, int frameStype = PS_SOLID, int frameWidth = 1, COLORREF frameColor = RGB(0, 0, 0));
+	static BOOL DrawPolygon(HDC hDC, std::vector<POINT>& points, COLORREF bkColor = 0xffffff, int frameStyle = PS_SOLID, int frameWidth = 1, COLORREF frameColor = RGB(0, 0, 0));
+	static BOOL DrawPolyline(HDC hDC, std::vector<POINT>& points, COLORREF bkColor = 0xffffff, int frameStyle = PS_SOLID, int frameWidth = 1, COLORREF frameColor = RGB(0, 0, 0));
 
 private:
 	std::vector<POINT> m_Points;

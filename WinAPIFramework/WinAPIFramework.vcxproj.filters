@@ -61,6 +61,9 @@
     <Filter Include="Application\Demos\Chapter6">
       <UniqueIdentifier>{ae16e503-02a9-40df-8dfd-a17e89dff708}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Application\Demos\Chapter7">
+      <UniqueIdentifier>{283f02f9-71a1-4864-a75d-eb3c2893c1ae}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -202,12 +205,33 @@
     <ClCompile Include="Demo2023\Demo5_4.cpp">
       <Filter>Application\Demos\Chapter5</Filter>
     </ClCompile>
-    <ClCompile Include="Animation.cpp" />
-    <ClCompile Include="Image.cpp" />
     <ClCompile Include="Demo2023\Demo6_1.cpp">
       <Filter>Application\Demos\Chapter6</Filter>
     </ClCompile>
-    <ClCompile Include="Dialog.cpp" />
+    <ClCompile Include="Demo2023\Demo6_2.cpp">
+      <Filter>Application\Demos\Chapter6</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo2023\Demo6_3.cpp">
+      <Filter>Application\Demos\Chapter6</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo2023\Demo7_1.cpp">
+      <Filter>Application\Demos\Chapter7</Filter>
+    </ClCompile>
+    <ClCompile Include="Animation.cpp">
+      <Filter>WinObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Dialog.cpp">
+      <Filter>WinObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Image.cpp">
+      <Filter>WinObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="ChildControls.cpp">
+      <Filter>WinObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="ChildWindow.cpp">
+      <Filter>WinObjects</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core.h">
@@ -360,12 +384,33 @@
     <ClInclude Include="Demo2023\Demo5_4.h">
       <Filter>Application\Demos\Chapter5</Filter>
     </ClInclude>
-    <ClInclude Include="Animation.h" />
-    <ClInclude Include="Image.h" />
     <ClInclude Include="Demo2023\Demo6_1.h">
       <Filter>Application\Demos\Chapter6</Filter>
     </ClInclude>
-    <ClInclude Include="Dialog.h" />
+    <ClInclude Include="Demo2023\Demo6_2.h">
+      <Filter>Application\Demos\Chapter6</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo2023\Demo6_3.h">
+      <Filter>Application\Demos\Chapter6</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo2023\Demo7_1.h">
+      <Filter>Application\Demos\Chapter7</Filter>
+    </ClInclude>
+    <ClInclude Include="Animation.h">
+      <Filter>WinObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Dialog.h">
+      <Filter>WinObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Image.h">
+      <Filter>WinObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="ChildControls.h">
+      <Filter>WinObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="ChildWindow.h">
+      <Filter>WinObjects</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="WinAPIFramework.rc">
@@ -376,8 +421,5 @@
     <Text Include="Demo2023\about chapter5 demos.txt">
       <Filter>Application\Demos\Chapter5</Filter>
     </Text>
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="bitmap1.bmp" />
   </ItemGroup>
 </Project>

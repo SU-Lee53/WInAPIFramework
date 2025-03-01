@@ -8,8 +8,9 @@
 #define IDR_MENU_4_4                    108
 #define IDB_BITMAP1                     115
 #define IDR_MENU_5_2                    118
-#define IDD_DIALOG1                     119
 #define IDD_DIALOG_6_1                  121
+#define IDD_DIALOG_6_2                  123
+#define IDD_DIALOG_6_3                  125
 #define IDC_BUTTON1                     1002
 #define IDC_BUTTON2                     1003
 #define IDC_RADIO1                      1004
@@ -17,12 +18,44 @@
 #define IDC_RADIO3                      1006
 #define IDC_RADIO4                      1007
 #define IDC_BUTTON3                     1008
+#define IDC_RADIO5                      1008
 #define IDC_BUTTON4                     1009
 #define IDC_BUTTON5                     1010
 #define IDC_CHECK1                      1011
+#define IDC_BUTTON6                     1011
 #define IDC_CHECK2                      1012
+#define IDC_BUTTON7                     1012
 #define IDC_CHECK3                      1013
+#define IDC_BUTTON8                     1013
 #define IDC_CHECK4                      1014
+#define IDC_BUTTON9                     1014
+#define IDC_BUTTON0                     1015
+#define IDC_BUTTON_X10                  1017
+#define IDC_BUTTON_BIN                  1018
+#define IDC_BUTTON_C                    1019
+#define IDC_BUTTON_SUM                  1020
+#define IDC_BUTTON_SUB                  1021
+#define IDC_BUTTON_MUL                  1022
+#define IDC_BUTTON_DIV                  1023
+#define IDC_BUTTON_EQ                   1024
+#define IDC_BUTTON_CE                   1025
+#define IDC_BUTTON_FIN                  1026
+#define IDC_BUTTON_POW                  1027
+#define IDC_BUTTON_DEL                  1028
+#define IDC_BUTTON_INV                  1029
+#define IDC_EDIT1                       1034
+#define IDC_LIST1                       1036
+#define IDC_DRAW                        1037
+#define IDC_MOVE                        1038
+#define IDC_REVERSE                     1039
+#define IDC_STOP                        1040
+#define IDC_REDRAW                      1041
+#define IDC_DIAGMOVE                    1042
+#define IDC_RADIO_ELLIPSE               1049
+#define IDC_RADIO_RECT                  1050
+#define IDC_RADIO_RED                   1051
+#define IDC_RADIO_GREEN                 1052
+#define IDC_RADIO_BLUE                  1053
 #define ID_GAME_START                   40001
 #define ID_GAME_RESET                   40002
 #define ID_GAME_END                     40003
@@ -87,9 +120,9 @@
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        123
+#define _APS_NEXT_RESOURCE_VALUE        127
 #define _APS_NEXT_COMMAND_VALUE         40060
-#define _APS_NEXT_CONTROL_VALUE         1012
+#define _APS_NEXT_CONTROL_VALUE         1053
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif

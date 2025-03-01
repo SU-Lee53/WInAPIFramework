@@ -23,6 +23,8 @@
     <ClCompile Include="Application.cpp" />
     <ClCompile Include="Bitmap.cpp" />
     <ClCompile Include="Caret.cpp" />
+    <ClCompile Include="ChildControls.cpp" />
+    <ClCompile Include="ChildWindow.cpp" />
     <ClCompile Include="Demo0.cpp" />
     <ClCompile Include="Core.cpp" />
     <ClCompile Include="Demo2023\Demo1_1.cpp">
@@ -115,14 +117,26 @@
     </ClCompile>
     <ClCompile Include="Demo2023\Demo5_1.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Demo2023\Demo5_2.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Demo2023\Demo5_4.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Demo2023\Demo6_1.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Demo2023\Demo6_2.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Demo2023\Demo6_3.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Demo2023\Demo7_1.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Dialog.cpp" />
@@ -152,6 +166,8 @@
     <ClInclude Include="Application.h" />
     <ClInclude Include="Bitmap.h" />
     <ClInclude Include="Caret.h" />
+    <ClInclude Include="ChildControls.h" />
+    <ClInclude Include="ChildWindow.h" />
     <ClInclude Include="Define.h" />
     <ClInclude Include="Demo0.h" />
     <ClInclude Include="Core.h" />
@@ -221,10 +237,19 @@
     <ClInclude Include="Demo2023\Demo4_4.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClInclude>
-    <ClInclude Include="Demo2023\Demo5_1.h" />
-    <ClInclude Include="Demo2023\Demo5_2.h" />
-    <ClInclude Include="Demo2023\Demo5_4.h" />
+    <ClInclude Include="Demo2023\Demo5_1.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Demo2023\Demo5_2.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Demo2023\Demo5_4.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
     <ClInclude Include="Demo2023\Demo6_1.h" />
+    <ClInclude Include="Demo2023\Demo6_2.h" />
+    <ClInclude Include="Demo2023\Demo6_3.h" />
+    <ClInclude Include="Demo2023\Demo7_1.h" />
     <ClInclude Include="Dialog.h" />
     <ClInclude Include="Ellipse.h" />
     <ClInclude Include="GameBoard.h" />
@@ -252,9 +277,6 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="Demo2023\about chapter5 demos.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="bitmap1.bmp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

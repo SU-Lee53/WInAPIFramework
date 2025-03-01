@@ -211,3 +211,24 @@ BOOL Polygon::DrawPolygon(HDC hDC, std::vector<POINT>& points, COLORREF bkColor,
 
     return bResult;
 }
+
+BOOL Polygon::DrawPolyline(HDC hDC, std::vector<POINT>& points, COLORREF bkColor, int frameStyle, int frameWidth, COLORREF frameColor)
+{
+    BOOL bResult = TRUE;
+
+    C_SOLID_HBRUSH hBrush(bkColor);
+    C_HPEN hPen(frameStyle, frameWidth, frameColor);
+
+    HBRUSH oldBrush = (HBRUSH)SelectObject(hDC, hBrush);
+    HPEN oldPen = (HPEN)::SelectObject(hDC, hPen);
+
+    bResult = ::Polyline(hDC, points.data(), points.size());
+
+    ::SelectObject(hDC, oldBrush);
+    ::SelectObject(hDC, oldPen);
+
+    hBrush.Destroy();
+    hPen.Destroy();
+
+    return bResult;
+}

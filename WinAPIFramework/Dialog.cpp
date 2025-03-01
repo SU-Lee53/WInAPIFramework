@@ -26,7 +26,7 @@ void ModalDialog::SetControlState(int controlMacro, BOOL bEnable)
 // Modalless
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-BOOL ModallessDialog::Create(int dialogMacro, DLGPROC m_DialogFunc)
+BOOL ModalessDialog::Create(int dialogMacro, DLGPROC m_DialogFunc)
 {
 	m_dialogMacro = dialogMacro;
 	m_dialogFunc = m_DialogFunc;
@@ -35,18 +35,25 @@ BOOL ModallessDialog::Create(int dialogMacro, DLGPROC m_DialogFunc)
 	return TRUE;
 }
 
-void ModallessDialog::ShowDialog()
+void ModalessDialog::ShowDialog()
 {
 	::ShowWindow(m_hDlg, SW_SHOW);
 }
 
-void ModallessDialog::DestroyDialog()
+void ModalessDialog::DestroyDialog()
 {
 	::DestroyWindow(m_hDlg);
 }
 
-void ModallessDialog::SetControlState(int controlMacro, BOOL bEnable)
+void ModalessDialog::SetControlState(int controlMacro, BOOL bEnable)
 {
 	HWND controlHwnd = GetDlgItem(m_hDlg, controlMacro);
 	::EnableWindow(controlHwnd, bEnable);
+}
+
+RECT ModalessDialog::GetDialogSize()
+{
+	RECT r;
+	::GetClientRect(m_hDlg, &r);
+	return r;
 }
