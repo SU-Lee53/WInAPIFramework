@@ -11,6 +11,9 @@
 #define IDD_DIALOG_6_1                  121
 #define IDD_DIALOG_6_2                  123
 #define IDD_DIALOG_6_3                  125
+#define IDR_MENU_8_0                    127
+#define IDR_MENU1                       128
+#define IDR_MENU_8_1                    128
 #define IDC_BUTTON1                     1002
 #define IDC_BUTTON2                     1003
 #define IDC_RADIO1                      1004
@@ -115,13 +118,19 @@
 #define ID_GAME_SHOWANSWER              40057
 #define ID_GAME_INVERT                  40058
 #define ID_GAME_STOP                    40059
+#define ID_FILE_OPEN                    40060
+#define ID_FILE_SAVE                    40061
+#define ID_FILE_FONT                    40062
+#define ID_FILE_COLOR                   40063
+#define ID_FILE_OPEN40064               40064
+#define ID_FILE_SAVE40065               40065
 
 // Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        127
-#define _APS_NEXT_COMMAND_VALUE         40060
+#define _APS_NEXT_RESOURCE_VALUE        129
+#define _APS_NEXT_COMMAND_VALUE         40066
 #define _APS_NEXT_CONTROL_VALUE         1053
 #define _APS_NEXT_SYMED_VALUE           101
 #endif

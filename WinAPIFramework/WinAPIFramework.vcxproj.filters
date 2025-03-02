@@ -64,6 +64,9 @@
     <Filter Include="Application\Demos\Chapter7">
       <UniqueIdentifier>{283f02f9-71a1-4864-a75d-eb3c2893c1ae}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Application\Demos\Chapter8">
+      <UniqueIdentifier>{54007f50-2fba-4979-95fa-64e187446b09}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -232,6 +235,13 @@
     <ClCompile Include="ChildWindow.cpp">
       <Filter>WinObjects</Filter>
     </ClCompile>
+    <ClCompile Include="Demo2023\Demo8_1.cpp">
+      <Filter>Application\Demos\Chapter8</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo2023\Demo8_0.cpp">
+      <Filter>Application\Demos\Chapter8</Filter>
+    </ClCompile>
+    <ClCompile Include="CommonDialog.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core.h">
@@ -411,6 +421,13 @@
     <ClInclude Include="ChildWindow.h">
       <Filter>WinObjects</Filter>
     </ClInclude>
+    <ClInclude Include="Demo2023\Demo8_1.h">
+      <Filter>Application\Demos\Chapter8</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo2023\Demo8_0.h">
+      <Filter>Application\Demos\Chapter8</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonDialog.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="WinAPIFramework.rc">
@@ -421,5 +438,8 @@
     <Text Include="Demo2023\about chapter5 demos.txt">
       <Filter>Application\Demos\Chapter5</Filter>
     </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="bitmap1.bmp" />
   </ItemGroup>
 </Project>
